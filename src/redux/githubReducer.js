@@ -5,7 +5,8 @@ const GET_REPO = "GET_REPO";
 
 let initialState = {
     repos:[],
-    isLoading:false
+    isLoading:false,
+    history:[]
 }
 
 const githubReducer = (state = initialState, action) =>{
