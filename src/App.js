@@ -1,5 +1,7 @@
-
+import React from "react";
 import './App.css';
+import {connect} from "react-redux";
+
 
 function App() {
   return (
@@ -10,4 +12,14 @@ function App() {
   );
 }
 
-export default App;
+let mapStateToProps = (state) =>({
+    isLoading: state.githubReducer.isLoading
+})
+
+let mapDispatchToProps = (dispatch) => ({
+
+})
+
+let AppContainer = connect(mapStateToProps, mapDispatchToProps)(App)
+
+export default AppContainer;
