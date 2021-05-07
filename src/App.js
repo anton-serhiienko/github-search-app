@@ -1,22 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import './App.css';
 import {connect} from "react-redux";
-import {addHistory, getRepo} from "./redux/githubReducer";
+import {getRepo} from "./redux/githubReducer";
 import SearchResult from "./components/SearchResult";
-
+import Header from "./components/Header";
 
 
 let App = (props) => {
-    let handleSearchClick = (request) => {
-        props.getRepo(request)
-        // props.addHistory(request)
-    }
-
-    let [searchRequest, setSearchRequest] = useState("")
-
-    let onFormChange = (e) =>{
-        setSearchRequest(e.currentTarget.value)
-    }
 
     let searchResultItems = props.repos.map(r =>
         <SearchResult repoName={r.full_name}
@@ -24,10 +14,15 @@ let App = (props) => {
                       key={r.key} desc={r.description}
                       stars={r.stargazers_count} language={r.language}/>)
   return (
-    <div className="App">
-      <input onChange={onFormChange} type="text"/>
-      <button onClick={() => handleSearchClick(searchRequest)}>Search</button>
+    <div className="App-wrapper">
+      <Header getRepo={props.getRepo}/>
+      <div className="App-wrapper-content">
+          контент
         {searchResultItems}
+      </div>
+        <div className={"App-wrapper-history"}>
+            History
+        </div>
     </div>
 
   );
