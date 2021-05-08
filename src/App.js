@@ -14,7 +14,7 @@ let App = (props) => {
                       key={r.key} desc={r.description}
                       stars={r.stargazers_count} language={r.language}/>)
   return (
-    <div className="App-wrapper">
+    <section className="App-wrapper">
       <Header getRepo={props.getRepo}/>
       <div className="App-wrapper-content">
           контент
@@ -23,7 +23,7 @@ let App = (props) => {
         <div className={"App-wrapper-history"}>
             History
         </div>
-    </div>
+    </section>
 
   );
 }

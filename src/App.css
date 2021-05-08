@@ -1,6 +1,7 @@
 .App-wrapper {
   color: white;
   margin: 0 auto;
+  padding: 0;
   display: grid;
   grid-template-areas:
           "h h"
@@ -8,15 +9,18 @@
 
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-  font-family: Arial, serif;
+  width: 100%;
 }
 
 .App-wrapper-content{
   grid-area: c;
-  background-color: rgb(13,17,23);
 }
 
 .App-wrapper-history{
   grid-area: his;
-  background-color: rgb(13,17,23);
+}
+
+.search-result-block{
+  border-bottom: white;
+  margin-bottom: 20px;
 }

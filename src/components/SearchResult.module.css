@@ -1,0 +1,33 @@
+.resultBlock{
+    border-bottom: white;
+    margin-bottom: 20px;
+    padding: 4px;
+}
+
+.resultBlock a{
+    font-size: 18px;
+    color: #39A6FF;
+}
+
+.resultBlock a:visited{
+    color: #39A6FF;
+}
+
+.resultBlock img{
+    width:10px
+}
+
+.repo{
+
+}
+
+.desc{
+   margin-top: 2px;
+    font-size: 16px;
+    color: lightgrey;
+}
+
+.additional{
+    color: lightgrey;
+    font-size: 16px;
+}
